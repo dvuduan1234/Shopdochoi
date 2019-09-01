@@ -1,10 +1,11 @@
-
+<?php
+session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="style.css" type="text/css">
-	<title>ATN SUPPER</title>
+	<title>Vin De France</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="css/hover-min.css" rel="stylesheet">
@@ -27,8 +28,7 @@
 			<div class="top-L">
 				<form action="timkiem.java">
 					<div id="containSearch">
-						<input type="text" placeholder="Search" style="padding: 6px;
-    padding-right: 45px; border-radius: 20px;">
+						<input type="text" placeholder="Search" style="padding: 6px;padding-right: 45px; border-radius: 20px;">
 						<input id="btnsearch" type="submit" value="">
 					</div>
 
@@ -36,99 +36,21 @@
 			</div>
 			<div class="top-R" >
 				<ul>
-					<li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto; color: white">Login</button>
-
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="Login.php" method="POST">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'"  class="close" title="Close Modal">&times;</span>
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="user" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="pass" required>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script></li>
-					<li><button onclick="document.getElementById('id02').style.display='block'" style="width:auto; color: white">Sign Up</button>
-
-<div id="id02" class="modal">
-  <span onclick="document.getElementById('id02').style.display='none'"class="close" title="Close Modal">&times;</span>
-  <form class="modal-content" action="Signup.php" method="POST">
-    <div class="container">
-      <h1>Sign Up</h1>
-      <p>Please fills in this form to create an account.</p>
-      <hr>
-      <label for="username"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="user" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="pass" required>
-
-      <!-- <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="pwrepeat" required>
-      
-      <label> -->
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-      </label>
-
-      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn">Sign Up</button>
-      </div>
-    </div>
-  </form>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id02');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-</li>
+					
+					<li>
+					<span style="color: white">
+						<?php echo $_SESSION['user'];  ?>
+					</span><br>
+					<li style="padding: 0px; margin: 12px;"><img src="anhlgin.png" width="30px"; height="30px"></li>
 				</ul>
 			</div>
 			<div class="giohang">
 				<a href="#"><img src="cart-1.png" alt="hình giỏ hàng"></a>
 				<p><a href="hinhgiohang">Empty Cart</a></p>
 			</div>
+			<p class="hvr-wobble-vertical"><a href="VindeFrance.php" style="text-decoration: none; color: white;">Log out </a></p>
 
 		</div>
-
 	<!-- phần Logo-->
 	<div class="logo">
 		<div class="logo-Left">
@@ -136,7 +58,7 @@ window.onclick = function(event) {
 		<li><img src="logo1.png" width="70px" height="70px" style="margin:5px;margin-left: 50px"></li>
 		<li><h1 style="margin-left: 15px; color: #d04141;
     font-family: cursive;">
-		ATN SUPPER</h1></li>
+		VIN DE FRANCE</h1></li>
 			</ul>
 		</div>
 		
@@ -145,6 +67,7 @@ window.onclick = function(event) {
 					<li><a href="VindeFrance.php" class="hvr-underline-from-center"> Home</a></li>
 					<li><a href="VindeFrance.php" class="hvr-underline-from-center"> 
 
+<?php include 'catalogy-list2.php';?>
 </a></li>
 					
 					
@@ -207,8 +130,8 @@ window.onclick = function(event) {
 <!-- chi tiết sp-->
 
 <div class="container-fluid" style="margin: 25px;
-    margin-left: 120px;">
-<?php include 'Product_list.php';?>
+    margin-left: 230px;">
+<?php include 'adminProduct-list.php';?>
 </div>
 
 
@@ -320,7 +243,7 @@ function closeForm() {
 		<div class="info">
 				<h3>Store Information</h3>
 				<ul>
-					<p style="color:gray">ATN SUPPER<br>
+					<p style="color:gray">VIN DE FRANCE,<br>
 						28 Pham Van Dong,<br>
 						Thanh Xuan,Ha Noi.<br>
 						+0328620615 </p>
@@ -349,7 +272,7 @@ function closeForm() {
 			border: 1px solid #484747;">
 		</form>
 	</div>
-	<div class="childfooter" id="rightfooter" style="padding: 20px; padding-left: 40px">© 2018 ATN SUPPER. All Rights Reserved | Design by Buitam</div>
+	<div class="childfooter" id="rightfooter" style="padding: 20px; padding-left: 40px">© 2018 VIN DE FRANCE. All Rights Reserved | Design by Buitam</div>
 
 	</div>
 </div>

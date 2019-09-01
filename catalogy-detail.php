@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="style.css" type="text/css">
-	<title>ATN SUPPER</title>
+	<title>Vin De France</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="css/hover-min.css" rel="stylesheet">
@@ -83,7 +83,7 @@ window.onclick = function(event) {
   <form class="modal-content" action="Signup.php" method="POST">
     <div class="container">
       <h1>Sign Up</h1>
-      <p>Please fills in this form to create an account.</p>
+      <p>Please fill in this form to create an account.</p>
       <hr>
       <label for="username"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="user" required>
@@ -136,7 +136,7 @@ window.onclick = function(event) {
 		<li><img src="logo1.png" width="70px" height="70px" style="margin:5px;margin-left: 50px"></li>
 		<li><h1 style="margin-left: 15px; color: #d04141;
     font-family: cursive;">
-		ATN SUPPER</h1></li>
+		VIN DE FRANCE</h1></li>
 			</ul>
 		</div>
 		
@@ -145,6 +145,7 @@ window.onclick = function(event) {
 					<li><a href="VindeFrance.php" class="hvr-underline-from-center"> Home</a></li>
 					<li><a href="VindeFrance.php" class="hvr-underline-from-center"> 
 
+<?php include 'catalogy-list.php';?>
 </a></li>
 					
 					
@@ -164,8 +165,7 @@ window.onclick = function(event) {
       <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
+     <div class="carousel-inner" role="listbox">
 
       <div class="item active">
         <img src="banner.jpg" alt="Chania" width="460" height="345">
@@ -190,9 +190,6 @@ window.onclick = function(event) {
           <p>Just what you've been looking for</p>
         </div> -->
       </div>
-
-     
-
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -205,14 +202,58 @@ window.onclick = function(event) {
   </div>
 </div>
 <!-- chi tiết sp-->
+		<div class="container" >
+			<?php 
 
-<div class="container-fluid" style="margin: 25px;
-    margin-left: 120px;">
-<?php include 'Product_list.php';?>
-</div>
+require_once'ketnoi.php';
+
+$Catid = $_GET["Catid"];
+$sql = "SELECT * FROM product where Catid ='".$Catid . "'";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+    	?>
+	
 
 
-<!-- chat-->
+			<div class="oneproduct">
+				<a class="hinhproduct" href="Product_detail.php?Productid=<?php echo $row["Productid"]?>">
+					<div class="faded">
+					
+					<img src="<?php echo $row["Image"]?>" class="image">
+					<div class="middle">
+				    <div class="discountbox">
+				    	<p>DISCOUNT <?php echo $row["Discount"]?> % </p>
+				    	<p>ONLY 
+				    		<?php
+				    		$Price=$row["Price"];
+				    		$Discount=$row["Discount"];
+				    		echo $Price-($Price * $Discount /100);
+				    		?>$
+				    	</p>
+				    </div>
+				  </div>
+				</div>
+				</a>
+					<div class="thongtinproduct">
+						<span><?php echo $row["Productname"]?></span><br>
+						<span class="explore" >EXPLORE NOW</span><br>
+								<img src="cart-2.png" alt="hình giỏ hàng">
+								<span><?php echo $row["Price"]?> $</span>
+						
+					</div>
+			</div>
+
+<?php
+	}
+}
+?>
+		</div>
+
+
+
+		<!-- chat-->
 <button class="open-button" onclick="openForm()">Chat</button>
 
 <div class="chat-popup" id="myForm">
@@ -236,22 +277,21 @@ function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
 </script>
-
 	<!-- phần thông tin-->
 	<div class="container">
 		<div class="info">
 			<h3>Follow Us</h3>
 			<ul>
-				<li><a href="https://www.facebook.com/buitam0098" class="hvr-wobble-vertical">
+				<li><a href="#" class="hvr-wobble-vertical">
 						<span class="social" id="facebook"></span>
 						<span class="txtSocial">FaceBook</span>
 					</a></li>
 
-				<li><a href="https://www.facebook.com/buitam0098" class="hvr-wobble-vertical">
+				<li><a href="#" class="hvr-wobble-vertical">
 						<span class="social" id="Twitter"></span>
 						<span class="txtSocial">Twitter</span>
 					</a></li>
-				<li><a href="https://www.facebook.com/buitam0098" class="hvr-wobble-vertical">
+				<li><a href="#" class="hvr-wobble-vertical">
 						<span class="social" id="Google"></span>
 						<span class="txtSocial">Google+</span>
 					</a></li>
@@ -320,7 +360,7 @@ function closeForm() {
 		<div class="info">
 				<h3>Store Information</h3>
 				<ul>
-					<p style="color:gray">ATN SUPPER<br>
+					<p style="color:gray">VIN DE FRANCE,<br>
 						28 Pham Van Dong,<br>
 						Thanh Xuan,Ha Noi.<br>
 						+0328620615 </p>
@@ -336,7 +376,7 @@ function closeForm() {
 		
 	<!-- phần footer-->
 <div class="footer">
-	<div class="container-fluid" style="margin-left: 150px;">
+	<div class="container">
 	<div class="childfooter" id="leftfooter">
 		<form action="#">
 			<input type="text" placeholder="Enter your Email" style="border: 1px solid #484747; padding: 8px;">
@@ -349,7 +389,7 @@ function closeForm() {
 			border: 1px solid #484747;">
 		</form>
 	</div>
-	<div class="childfooter" id="rightfooter" style="padding: 20px; padding-left: 40px">© 2018 ATN SUPPER. All Rights Reserved | Design by Buitam</div>
+	<div class="childfooter" id="rightfooter" style="padding: 20px; padding-left: 40px">© 2018 VIN DE FRANCE. All Rights Reserved | Design by Buitam</div>
 
 	</div>
 </div>

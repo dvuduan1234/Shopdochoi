@@ -1,10 +1,11 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="style.css" type="text/css">
-	<title>ATN SUPPER</title>
+	<title>Vin De France</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="css/hover-min.css" rel="stylesheet">
@@ -20,8 +21,7 @@
   </style>
 	
 </head>
-<body>
-
+<body style="margin:0px;">
 	<!-- phần top -->
 		<div class="top">
 			<div class="top-L">
@@ -36,96 +36,25 @@
 			</div>
 			<div class="top-R" >
 				<ul>
-					<li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto; color: white">Login</button>
+					
+					<li>
+					<span style="color: white">
+						<?php echo $_SESSION['user'];  ?>
+					</span><br>
+						
+			
 
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="Login.php" method="POST">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'"  class="close" title="Close Modal">&times;</span>
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="user" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="pass" required>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script></li>
-					<li><button onclick="document.getElementById('id02').style.display='block'" style="width:auto; color: white">Sign Up</button>
-
-<div id="id02" class="modal">
-  <span onclick="document.getElementById('id02').style.display='none'"class="close" title="Close Modal">&times;</span>
-  <form class="modal-content" action="Signup.php" method="POST">
-    <div class="container">
-      <h1>Sign Up</h1>
-      <p>Please fills in this form to create an account.</p>
-      <hr>
-      <label for="username"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="user" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="pass" required>
-
-      <!-- <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="pwrepeat" required>
-      
-      <label> -->
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-      </label>
-
-      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn">Sign Up</button>
-      </div>
-    </div>
-  </form>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id02');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
 </li>
+<li style="    padding: 0px;
+    margin: 12px;"
+><img src="anhlgin.png" width="30px"; height="30px"></li>
 				</ul>
 			</div>
 			<div class="giohang">
 				<a href="#"><img src="cart-1.png" alt="hình giỏ hàng"></a>
 				<p><a href="hinhgiohang">Empty Cart</a></p>
 			</div>
+			<p class="hvr-wobble-vertical"><a href="VindeFrance.php" style="text-decoration: none; color: white;">Log out </a></p>
 
 		</div>
 
@@ -136,16 +65,17 @@ window.onclick = function(event) {
 		<li><img src="logo1.png" width="70px" height="70px" style="margin:5px;margin-left: 50px"></li>
 		<li><h1 style="margin-left: 15px; color: #d04141;
     font-family: cursive;">
-		ATN SUPPER</h1></li>
+		VIN DE FRANCE</h1></li>
 			</ul>
 		</div>
 		
 		<div class="logo-Right">
 			<ul>
-					<li><a href="VindeFrance.php" class="hvr-underline-from-center"> Home</a></li>
-					<li><a href="VindeFrance.php" class="hvr-underline-from-center"> 
-
-</a></li>
+					<li><a href="VindeFrance2.php" class="hvr-underline-from-center"> Home</a></li>
+					<li><a href="VindeFrance2.php" class="hvr-underline-from-center"> 
+					
+					<!-- <?php include 'catalogy-list2.php';?> -->
+					</a></li>
 					
 					
 				</ul>
@@ -164,8 +94,7 @@ window.onclick = function(event) {
       <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
+     <div class="carousel-inner" role="listbox">
 
       <div class="item active">
         <img src="banner.jpg" alt="Chania" width="460" height="345">
@@ -190,9 +119,6 @@ window.onclick = function(event) {
           <p>Just what you've been looking for</p>
         </div> -->
       </div>
-
-     
-
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -205,14 +131,77 @@ window.onclick = function(event) {
   </div>
 </div>
 <!-- chi tiết sp-->
+		<div class="container" >
 
-<div class="container-fluid" style="margin: 25px;
-    margin-left: 120px;">
-<?php include 'Product_list.php';?>
-</div>
+<?php
+		include 'ketnoi.php';
+		$productid =$_GET['productid'];
+		            $sql = "SELECT productid, image, price, discount, productname FROM product  WHERE productid = '$productid'";
+		            $result = pg_query($connection,$sql);
+		            if (pg_num_rows($result) > 0) {
+		            // output data of each row
+		            while($row = pg_fetch_assoc($result)) {
+		            	$productid = $row['productid'];
+		              	$price = $row['price'];
+		              	$image = $row['image'];
+		              	$discount = $row['discount'];
+		              	$productname = $row['productname'];
+		              	$description = $row['description'];
+		         
+		          ?>
+			
+
+<table style="margin-bottom: 30px; margin-top: 30px;">
+			 <tr>
+  <td rowspan="6"><img src="<?= $image; ?>" alt="Chania" width="300" height="300" ></td>
+    <td style="    padding-right: 20px;"><b>NAME:   </b></td>
+    <td style="font-size: 20px"><?= $productname; ?></td>
+    
+  </tr>
+  <tr>
+    <td style="    padding-right: 20px;"><b>PRICE:   </b></td>
+    <td style="font-size: 20px"><del><?= $price; ?> $ </del></td>
+  </tr>
+
+   <tr>
+    <td style="    padding-right: 25px; color: red;"><b>DISCOUNT:   </b></td>
+    <td style="font-size: 25px;color: red"><?= $discount; ?> % </b></td>
+  </tr>
 
 
-<!-- chat-->
+  <tr>
+    <td style="    padding-right: 20px; color: red"><b>ONLY:   </b></td>
+    <td style="font-size: 20px;color: red"><b><?= $price; ?>$</b></td>
+  </tr>
+
+  <tr>
+    <td style="    padding-right: 20px;"><b>DESCRIPTION:</b></td>
+    <td style="font-size: 20px"><?= $description; ?></td>
+  </tr>
+
+  <tr><td></td>
+  	<td><br><button onclick="show()" style="width: 100px;color: white">BUY NOW</button></td>
+                      </tr>
+                    
+                     
+</table>
+
+				<?php
+			}
+			}
+			
+			?>
+<script type="text/javascript">
+                        function show(){
+                          alert("Buying Successful!");
+                        }
+                    </script>
+
+
+	
+
+
+		<!-- chat-->
 <button class="open-button" onclick="openForm()">Chat</button>
 
 <div class="chat-popup" id="myForm">
@@ -236,22 +225,21 @@ function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
 </script>
-
 	<!-- phần thông tin-->
 	<div class="container">
 		<div class="info">
 			<h3>Follow Us</h3>
 			<ul>
-				<li><a href="https://www.facebook.com/buitam0098" class="hvr-wobble-vertical">
+				<li><a href="#" class="hvr-wobble-vertical">
 						<span class="social" id="facebook"></span>
 						<span class="txtSocial">FaceBook</span>
 					</a></li>
 
-				<li><a href="https://www.facebook.com/buitam0098" class="hvr-wobble-vertical">
+				<li><a href="#" class="hvr-wobble-vertical">
 						<span class="social" id="Twitter"></span>
 						<span class="txtSocial">Twitter</span>
 					</a></li>
-				<li><a href="https://www.facebook.com/buitam0098" class="hvr-wobble-vertical">
+				<li><a href="#" class="hvr-wobble-vertical">
 						<span class="social" id="Google"></span>
 						<span class="txtSocial">Google+</span>
 					</a></li>
@@ -320,7 +308,7 @@ function closeForm() {
 		<div class="info">
 				<h3>Store Information</h3>
 				<ul>
-					<p style="color:gray">ATN SUPPER<br>
+					<p style="color:gray">VIN DE FRANCE,<br>
 						28 Pham Van Dong,<br>
 						Thanh Xuan,Ha Noi.<br>
 						+0328620615 </p>
@@ -336,7 +324,7 @@ function closeForm() {
 		
 	<!-- phần footer-->
 <div class="footer">
-	<div class="container-fluid" style="margin-left: 150px;">
+	<div class="container">
 	<div class="childfooter" id="leftfooter">
 		<form action="#">
 			<input type="text" placeholder="Enter your Email" style="border: 1px solid #484747; padding: 8px;">
@@ -349,7 +337,7 @@ function closeForm() {
 			border: 1px solid #484747;">
 		</form>
 	</div>
-	<div class="childfooter" id="rightfooter" style="padding: 20px; padding-left: 40px">© 2018 ATN SUPPER. All Rights Reserved | Design by Buitam</div>
+	<div class="childfooter" id="rightfooter" style="padding: 20px; padding-left: 40px">© 2018 VIN DE FRANCE. All Rights Reserved | Design by Buitam</div>
 
 	</div>
 </div>

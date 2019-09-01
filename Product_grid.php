@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="style.css" type="text/css">
-	<title>ATN SUPPER</title>
+	<title>Vin De France</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="css/hover-min.css" rel="stylesheet">
@@ -20,8 +19,7 @@
   </style>
 	
 </head>
-<body>
-
+<body style="margin:0px;">
 	<!-- phần top -->
 		<div class="top">
 			<div class="top-L">
@@ -36,13 +34,13 @@
 			</div>
 			<div class="top-R" >
 				<ul>
-					<li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto; color: white">Login</button>
+					<li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
 <div id="id01" class="modal">
   
   <form class="modal-content animate" action="Login.php" method="POST">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'"  class="close" title="Close Modal">&times;</span>
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
     </div>
 
     <div class="container">
@@ -67,7 +65,7 @@
 
 <script>
 // Get the modal
-var modal = document.getElementById('id01');
+var modal = document.getElementById('id02');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -76,14 +74,14 @@ window.onclick = function(event) {
     }
 }
 </script></li>
-					<li><button onclick="document.getElementById('id02').style.display='block'" style="width:auto; color: white">Sign Up</button>
+					<li><button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button>
 
 <div id="id02" class="modal">
-  <span onclick="document.getElementById('id02').style.display='none'"class="close" title="Close Modal">&times;</span>
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
   <form class="modal-content" action="Signup.php" method="POST">
     <div class="container">
       <h1>Sign Up</h1>
-      <p>Please fills in this form to create an account.</p>
+      <p>Please fill in this form to create an account.</p>
       <hr>
       <label for="username"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="user" required>
@@ -136,18 +134,16 @@ window.onclick = function(event) {
 		<li><img src="logo1.png" width="70px" height="70px" style="margin:5px;margin-left: 50px"></li>
 		<li><h1 style="margin-left: 15px; color: #d04141;
     font-family: cursive;">
-		ATN SUPPER</h1></li>
+		VIN DE FRANCE</h1></li>
 			</ul>
 		</div>
 		
 		<div class="logo-Right">
 			<ul>
-					<li><a href="VindeFrance.php" class="hvr-underline-from-center"> Home</a></li>
-					<li><a href="VindeFrance.php" class="hvr-underline-from-center"> 
-
-</a></li>
-					
-					
+					<li><a href="#" class="hvr-underline-from-center"> Home</a></li>
+					<li><a href="#" class="hvr-underline-from-center"> Product</a></li>
+					<li><a href="#" class="hvr-underline-from-center"> Blog</a></li>
+					<li><a href="#" class="hvr-underline-from-center"> Contact</a></li>
 				</ul>
 
 		</div>
@@ -168,30 +164,36 @@ window.onclick = function(event) {
     <div class="carousel-inner" role="listbox">
 
       <div class="item active">
-        <img src="banner.jpg" alt="Chania" width="460" height="345">
-       <!--  <div class="carousel-caption">
-         <h3>Vin De France</h3>
-         <p>Can't Resist the Mist!</p>
-       </div> -->
+        <img src="bia1.jpg" alt="Chania" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Vin De France</h3>
+          <p>A Moments of Comfortable</p>
+        </div>
       </div>
 
       <div class="item">
-        <img src="banner2.jpg" alt="Chania" width="460" height="345">
-        <!-- <div class="carousel-caption">
+        <img src="bia2.jpg" alt="Chania" width="460" height="345">
+        <div class="carousel-caption">
           <h3>Vin De France</h3>
-          <p>Great Tasting Wine with a Splash of Fruit </p>
-        </div> -->
+          <p>Can't Resist the Mist! </p>
+        </div>
       </div>
     
       <div class="item">
-        <img src="banner3.jpg" alt="Chania" width="460" height="345">
-        <!-- <div class="carousel-caption">
+        <img src="bia3.jpg" alt="Chania" width="460" height="345">
+        <div class="carousel-caption">
           <h3>Vin De France</h3>
-          <p>Just what you've been looking for</p>
-        </div> -->
+          <p>Great Tasting Wine with a Splash of Fruit</p>
+        </div>
       </div>
 
-     
+      <div class="item">
+        <img src="bia4.jpg" alt="Chania" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Vin De France</h3>
+          <p>Just what you've been looking for</p>
+        </div>
+      </div>
 
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -204,62 +206,51 @@ window.onclick = function(event) {
     </a>
   </div>
 </div>
-<!-- chi tiết sp-->
 
-<div class="container-fluid" style="margin: 25px;
-    margin-left: 120px;">
-<?php include 'Product_list.php';?>
+	<!-- phần sản phẩm chính-->
+	<div class="container">
+	<?php include 'Product_list.php';?>
 </div>
+	
+<!-- phần the best sellers -->
+	<div class="about">
+		<div class="container">
+			<marquee>
+			<div class="sp1">
+				<a><img src="11.jpg" alt="Château Gromel Bel Air bottom" width="350px" height="300px">
+			</div>
+			<div class="sp1">
+					<img src="22.jpg" alt="LeCarmes bottom" width="350px" height="300px">
+			</div>
+			<div class="sp1">
+					<img src="33.jpg" alt="vin-de-pays-de-lherault bottom" width="350px" height="300px">
+			</div>
+		</marquee>
+		
+		</div>
 
-
-<!-- chat-->
-<button class="open-button" onclick="openForm()">Chat</button>
-
-<div class="chat-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Chat</h1>
-
-    <label for="msg"><b>Message</b></label>
-    <textarea placeholder="Type message.." name="msg" required></textarea>
-
-    <button type="submit" class="btn">Send</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
-</div>
-
-<script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-</script>
-
+		</div>
 	<!-- phần thông tin-->
 	<div class="container">
 		<div class="info">
 			<h3>Follow Us</h3>
 			<ul>
-				<li><a href="https://www.facebook.com/buitam0098" class="hvr-wobble-vertical">
+				<li><a href="#" class="hvr-wobble-vertical">
 						<span class="social" id="facebook"></span>
 						<span class="txtSocial">FaceBook</span>
 					</a></li>
 
-				<li><a href="https://www.facebook.com/buitam0098" class="hvr-wobble-vertical">
+				<li><a href="#" class="hvr-wobble-vertical">
 						<span class="social" id="Twitter"></span>
 						<span class="txtSocial">Twitter</span>
 					</a></li>
-				<li><a href="https://www.facebook.com/buitam0098" class="hvr-wobble-vertical">
+				<li><a href="#" class="hvr-wobble-vertical">
 						<span class="social" id="Google"></span>
 						<span class="txtSocial">Google+</span>
 					</a></li>
 			
 		</ul>
 		</div>
-
-
 		
 		<div class="info">
 				<h3>Information</h3>
@@ -320,7 +311,7 @@ function closeForm() {
 		<div class="info">
 				<h3>Store Information</h3>
 				<ul>
-					<p style="color:gray">ATN SUPPER<br>
+					<p style="color:gray">VIN DE FRANCE,<br>
 						28 Pham Van Dong,<br>
 						Thanh Xuan,Ha Noi.<br>
 						+0328620615 </p>
@@ -336,7 +327,7 @@ function closeForm() {
 		
 	<!-- phần footer-->
 <div class="footer">
-	<div class="container-fluid" style="margin-left: 150px;">
+	<div class="container">
 	<div class="childfooter" id="leftfooter">
 		<form action="#">
 			<input type="text" placeholder="Enter your Email" style="border: 1px solid #484747; padding: 8px;">
@@ -349,7 +340,7 @@ function closeForm() {
 			border: 1px solid #484747;">
 		</form>
 	</div>
-	<div class="childfooter" id="rightfooter" style="padding: 20px; padding-left: 40px">© 2018 ATN SUPPER. All Rights Reserved | Design by Buitam</div>
+	<div class="childfooter" id="rightfooter" style="padding: 20px; padding-left: 40px">© 2018 VIN DE FRANCE. All Rights Reserved | Design by Buitam</div>
 
 	</div>
 </div>

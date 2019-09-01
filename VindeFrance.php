@@ -83,7 +83,7 @@ window.onclick = function(event) {
   <form class="modal-content" action="Signup.php" method="POST">
     <div class="container">
       <h1>Sign Up</h1>
-      <p>Please fills in this form to create an account.</p>
+      <p>Please fill in this form to create an account.</p>
       <hr>
       <label for="username"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="user" required>
@@ -207,7 +207,7 @@ window.onclick = function(event) {
 <!-- chi tiết sp-->
 
 <div class="container-fluid" style="margin: 25px;
-    margin-left: 120px;">
+    margin-left: 230px;">
 <?php include 'Product_list.php';?>
 </div>
 
@@ -320,7 +320,7 @@ function closeForm() {
 		<div class="info">
 				<h3>Store Information</h3>
 				<ul>
-					<p style="color:gray">ATN SUPPER<br>
+					<p style="color:gray">ATN SUPPER,<br>
 						28 Pham Van Dong,<br>
 						Thanh Xuan,Ha Noi.<br>
 						+0328620615 </p>
